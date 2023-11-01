@@ -57,7 +57,9 @@ html, body {
 a {
     color: var(--text);
     text-decoration: none;
+    padding: .25rem .5rem .25rem .5rem;
 }
+
 
 nav {
     display: flex;
@@ -81,10 +83,9 @@ nav img {
     align-items: center;
     padding: 0;
     margin: 0;
-    width: 32vw;
+    width: 28vw;
 }
-
-.navigation-btn h5 {
+.navigation-btn a {
     color: var(--text);
     background: none;
     transition: .50s;
@@ -92,12 +93,14 @@ nav img {
     border-radius: 4px;
     border: none;
 }
-.navigation-btn h5:hover {
+
+.navigation-btn a:hover, .navigation-btn a:focus {
     transition: .25s;
     color: var(--primary);
     transform: scale(1.09);
-    border: 1px solid var(--primary);
+    border: 2px solid var(--primary);
     box-shadow: var(--primary) 8px 4px;
+    outline: none;
 }
 
 #info {
@@ -122,20 +125,21 @@ nav img {
     font-style: italic;
     color: var(--primary);
 }
-.cta-btn h5 {
+.cta-btn a {
     width: 16rem;
-    border: 1px solid var(--text);
+    border: 2px solid var(--text);
     border-radius: 4px;
     padding: .5rem;
     text-align: center;
     transition: .50s;
 }
-.cta-btn h5:hover {
+.cta-btn a:hover, .cta-btn a:focus {
     transition: .25s;
     color: var(--primary);
-    border: 1px solid var(--primary);
-    box-shadow: var(--primary) 16px 12px;
+    border: 2px solid var(--primary);
+    box-shadow: var(--primary) 12px 8px;
     transform: scale(1.09);
+    outline: none;
 }
 .intro-text {
     width: 72%;
@@ -206,16 +210,20 @@ nav img {
 .produkt-info h4 {
     margin-bottom: 0;
 }
-.produkt-info a h5 {
+.produkt-info h5 a {
     padding: .5rem 2rem .5rem 2rem;
     border-radius: 4px;
-    border: 2px solid var(--accent);
+    border: 2px solid white;
     transition: .50s;
 }
-.produkt-info a h5:hover {
-    transform: scale(1.09);
+.produkt-info h5 a:hover, .produkt-info h5 a:focus {
     color: var(--accent);
+    border: 2px solid var(--accent);
     transition: .25s;
+    outline: none;
+}
+.produkt-info h5 a:focus {
+    box-shadow: var(--accent) 8px 4px;
 }
 .wavy {
     color: var(--secondary);
@@ -226,4 +234,123 @@ nav img {
     font-weight: 300;
     font-size: 4rem;
     text-decoration: underline;
+}
+
+#kontakt {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    background-color: var(--secondary);
+    width: 100vw;
+    height: 100vh;
+}
+.skjema {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    color: white;
+    background-color: var(--primary);
+    padding: 2rem;
+    border-radius: 4px;
+    width: 20vw;
+    box-shadow: var(--accent) 16px 12px;
+}
+.skjema * {
+    border-radius: 4px;
+}
+.skjema label h5 {
+    margin: 0;
+    margin-bottom: .5rem;
+    padding: 0;
+}
+.skjema input, .skjema textarea{
+    margin-bottom: 1.5rem;
+    border: 2px solid var(--accent);
+    padding: .5rem;
+    font-size: 1rem;
+    font-family: 'roboto';
+    font-weight: 400;
+    letter-spacing: .04rem;
+
+    transition: .5s;
+}
+.skjema #sjanger { 
+      appearance: none;
+  /* safari */
+  -webkit-appearance: none;
+  /* other styles for aesthetics */
+    margin-bottom: 1.5rem;
+    border: 2px solid var(--accent);
+    padding: .5rem;
+    font-size: 1rem;
+    font-family: 'roboto';
+    font-weight: 400;
+    letter-spacing: .04rem;
+    cursor: pointer;
+
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23131313%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.7rem top 50%;
+    background-size: 0.65rem auto;
+
+    transition: .5s;
+}
+.skjema input:focus, .skjema textarea:focus, .skjema #sjanger:focus {
+    outline: none;
+    border: 2px solid var(--secondary);
+    box-shadow: var(--secondary) 12px 8px;
+    transform: scale(1.04);
+    transition: .25s;
+}
+
+#submit-btn{
+    color: white;
+    background-color: var(--accent);
+    font-family: 'poppins';
+    font-weight: 600;
+    font-size: 1rem;
+    transition: .50s;
+    border: 2px solid var(--text);
+}
+#submit-btn:hover, #submit-btn:focus {
+    transform: scale(1.04);
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
+    outline: none;
+    box-shadow: var(--secondary) 12px 8px;
+    transition: .25s;
+}
+
+.kontakt-tekst {
+    width: 40vw;
+    color: var(--text);
+}
+.kontakt-tekst p {
+    width: 80%;
+    line-height: 1.8rem;
+    font-size: 1.25rem;
+    font-weight: 300;
+    padding-bottom: 1.5rem;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    background-color: var(--background);
+    height: 16vh;
+    padding-left: 14rem;
+    padding-right: 14rem;
+}
+.footer-img {
+    width: 8vw;
+}
+footer p {
+    color: var(--text);
+    font-weight: 300;
+    font-size: 1rem;
+    width: 52%;
 }
