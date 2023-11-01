@@ -1,0 +1,229 @@
+@media (prefers-color-scheme: light) {
+  :root {
+    --text: #090104;
+    --background: #fef6f9;
+    --primary: #a4134d;
+    --secondary: #f2b6ce;
+    --accent: #c9185e;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #fef6f9;
+    --background: #090104;
+    --primary: #ec5b95;
+    --secondary: #4a0d25;
+    --accent: #e7367d;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+  font-family: 'Roboto';
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Poppins';
+  font-weight: 700;
+}
+
+html {font-size: 100%;} /* 16px */
+
+h1 {font-size: 4.210rem; /* 67.36px */}
+
+h2 {font-size: 3.158rem; /* 50.56px */}
+
+h3 {font-size: 2.369rem; /* 37.92px */}
+
+h4 {font-size: 1.777rem; /* 28.48px */}
+
+h5 {font-size: 1.333rem; /* 21.28px */}
+
+small {font-size: 0.750rem; /* 12px */}
+
+
+
+html, body {
+    font-size: 16px;
+    width: 100wv;
+    height: 100wh;
+    padding: 0;
+    margin: 0;
+    background-color: var(--background); 
+}
+
+a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-evenly;
+    gap: 24rem;
+    box-shadow: 0 2px 2px -2px gray;
+}
+
+
+nav img {
+    height: 56px;
+    padding: 2rem;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    width: 32vw;
+}
+
+.navigation-btn h5 {
+    color: var(--text);
+    background: none;
+    transition: .50s;
+    padding: .25rem .5rem .25rem .5rem;
+    border-radius: 4px;
+    border: none;
+}
+.navigation-btn h5:hover {
+    transition: .25s;
+    color: var(--primary);
+    transform: scale(1.09);
+    border: 1px solid var(--primary);
+    box-shadow: var(--primary) 8px 4px;
+}
+
+#info {
+    width: 100vw;
+    height: 88vh;
+    display: flex;
+    justify-content: center;
+}
+.info-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 72vw;
+}
+.info-container h1 {
+    margin: 0;
+}
+.cta-container {
+    padding-top: 12rem;
+    color: var(--text);
+}
+.pink {
+    font-style: italic;
+    color: var(--primary);
+}
+.cta-btn h5 {
+    width: 16rem;
+    border: 1px solid var(--text);
+    border-radius: 4px;
+    padding: .5rem;
+    text-align: center;
+    transition: .50s;
+}
+.cta-btn h5:hover {
+    transition: .25s;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    box-shadow: var(--primary) 16px 12px;
+    transform: scale(1.09);
+}
+.intro-text {
+    width: 72%;
+    line-height: 1.8rem;
+    font-size: 1.25rem;
+    font-weight: 300;
+    padding-bottom: 1.5rem;
+}
+
+
+.filler {
+    padding-top: 4rem;
+    widows: 413px;
+}
+.rocky {
+    width: 413px;
+    background-color: var(--primary);
+    box-shadow: var(--secondary) 16px 16px;
+    border-radius: 8px;
+    padding: .5rem, .5rem, .5rem, .5rem;
+}
+
+
+#produkter {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--primary);
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.produkt-wrapper {
+    width: 84vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+}
+.produkt {
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    background-color: var(--secondary);
+    box-shadow: var(--accent) 16px 12px;
+    border-radius: 4px;
+    transition: .50s;
+}
+.produkt:hover {
+    transform: scale(1.02);
+    box-shadow: var(--accent) 28px 24px;
+    transition: .25;
+}
+.produkt img {
+    border-radius: 4px;
+}
+.produkt-info {
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+.produkt-info h4 {
+    margin-bottom: 0;
+}
+.produkt-info a h5 {
+    padding: .5rem 2rem .5rem 2rem;
+    border-radius: 4px;
+    border: 2px solid var(--accent);
+    transition: .50s;
+}
+.produkt-info a h5:hover {
+    transform: scale(1.09);
+    color: var(--accent);
+    transition: .25s;
+}
+.wavy {
+    color: var(--secondary);
+    letter-spacing: .5rem;
+}
+.slanted {
+    font-style: italic;
+    font-weight: 300;
+    font-size: 4rem;
+    text-decoration: underline;
+}
