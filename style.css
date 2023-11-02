@@ -152,10 +152,9 @@ nav img {
 
 .filler {
     padding-top: 4rem;
-    widows: 413px;
 }
 .rocky {
-    width: 413px;
+    width: 24vw;
     background-color: var(--primary);
     box-shadow: var(--secondary) 16px 16px;
     border-radius: 8px;
@@ -199,6 +198,7 @@ nav img {
 }
 .produkt img {
     border-radius: 4px;
+    width: 16vw;
 }
 .produkt-info {
     color: var(--text);
@@ -255,6 +255,7 @@ nav img {
     padding: 2rem;
     border-radius: 4px;
     width: 20vw;
+    height: 64vh;
     box-shadow: var(--accent) 16px 12px;
 }
 .skjema * {
